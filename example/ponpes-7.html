@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://ditpdpontren.kemenag.go.id/pdpp/favicon.png">
+
+    <title>Pangkalan Data Pondok Pesantren</title>
+
+    <!--  CSS -->
+    <link href="https://ditpdpontren.kemenag.go.id/pdpp/umum/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://ditpdpontren.kemenag.go.id/pdpp/umum/css/style.css" rel="stylesheet">
+	
+    
+    
+	
+	
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+
+</head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81015334-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+    <div class="navbar-wrapper">
+      <div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="https://ditpdpontren.kemenag.go.id/pdpp">pdpp</a>
+            </div>
+			
+			
+			
+            <div id="navbar" class="navbar-collapse collapse navbar-right">
+              
+			  <ul class="nav navbar-nav">
+          <li class=""><a href="https://ditpdpontren.kemenag.go.id/pdpp">Beranda</a></li>
+          <li class=""><a href="https://ditpdpontren.kemenag.go.id/pdpp/potensi-pesantren">Potensi pesantren</a></li>
+          <li class=""><a href="https://ditpdpontren.kemenag.go.id/pdpp/search">Cari Pesantren</a></li>
+	        <li class=""><a href="https://ditpdpontren.kemenag.go.id/pdpp/map">Peta Pesantren</a></li>
+          <li class=""><a href="https://ditpdpontren.kemenag.go.id/pdpp/statistik">Statistik</a></li>
+	        <!--<li><a href="#">Download Data</a></li>-->
+          <li class=""><a href="https://ditpdpontren.kemenag.go.id/pdpp/grafik">Grafik</a></li>
+          <li class=""><a href="https://ditpdpontren.kemenag.go.id/pdpp/about">Tentang PDPP</a></li>  
+                    <li class=""><a href="https://ditpdpontren.kemenag.go.id/pdpp/login">Login</a></li>        
+                  </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+        </div>
+
+
+       <!-- Carousel
+    ================================================== -->
+ <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item profil active">
+          <img class="second-slide">
+          <div class="container">
+            <div class="form-search">
+              <form role="form" method="GET" action="https://ditpdpontren.kemenag.go.id/pdpp/loadpp" >
+				<input type="hidden" name="_token" value="0KlbQ6JY3R7uN9T74K5EuakC4U3KRHTnCdGcvYdS">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Pilih Provinsi</label>
+                    <select class="provinsi form-control" name="provinsi_id_provinsi"><option value="">Semua Provinsi</option><option value="11">Aceh</option><option value="12">Sumatera Utara</option><option value="13">Sumatera Barat</option><option value="14">Riau</option><option value="15">Jambi</option><option value="16">Sumatera Selatan</option><option value="17">Bengkulu</option><option value="18">Lampung</option><option value="19">Bangka Belitung</option><option value="21">Kepulauan Riau</option><option value="31">DKI Jakarta</option><option value="32">Jawa Barat</option><option value="33">Jawa Tengah</option><option value="34">DI Yogyakarta</option><option value="35">Jawa Timur</option><option value="36">Banten</option><option value="51">Bali</option><option value="52">Nusa Tenggara Barat</option><option value="53">Nusa Tenggara Timur</option><option value="61">Kalimantan Barat</option><option value="62">Kalimantan Tengah</option><option value="63">Kalimantan Selatan</option><option value="64">Kalimantan Timur</option><option value="65">Kalimantan Utara</option><option value="71">Sulawesi Utara</option><option value="72">Sulawesi Tengah</option><option value="73">Sulawesi Selatan</option><option value="74">Sulawesi Tenggara</option><option value="75">Gorontalo</option><option value="76">Sulawesi Barat</option><option value="81">Maluku</option><option value="82">Maluku Utara</option><option value="91">Papua</option><option value="92">Papua Barat</option></select>
+                                                </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Pilih Kabupaten</label>
+                    <select class="kabupaten form-control" name="kabupaten_id_kabupaten"><option value="0" selected="selected">Semua Kabupaten</option></select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Kata Kunci</label>
+                    
+					<input id="loadpp" type="text" class="mgBtm-15 form-control noBdRds" name="loadpp" value="">
+
+                                								
+                    <button id="Invio" name="Invio" class="btn btn-info btn-yellow col-md-12"><span class="glyphicon glyphicon-search"></span> Cari Pesantren
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /.carousel -->    <!-- Carousel
+    ================================================== -->
+
+
+
+<div class="container-full">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 pdBtm-30 pdTop-20">
+        <h1 class="color-green">Profil Pesantren PP Darul Mukhlasin</h1>
+      </div>
+      <div class="col-sm-12 col-md-12">
+          <div class="portlet light">
+              <div class="row">
+                  <div class="col-sm-6 col-md-4">
+                      <img src="https://ditpdpontren.kemenag.go.id/pdpp/umum/images/fotodefault.png" alt="Foto Pondok" class="img-rounded img-responsive" />
+                  </div>
+                  <div class="col-sm-8 col-md-8">
+                    <div class="desc-pondok font-heltic">
+                      <h3 class="nama-pondok color-green mgTop-0">Pondok Pesantren PP Darul Mukhlasin</h3>
+                      <div class="nspp-pondok">NSPP 510011170024</div>
+                      <div class="height-30 pendiri-pondok">
+                        <img src="https://ditpdpontren.kemenag.go.id/pdpp/umum/images/icon-kyai.png" alt="icon kyai"> Tgk. Muhammad Luthfi Harun Alhafidz
+                      </div>
+                      <div class="height pendiri-pondok">
+                        <a href="https://ditpdpontren.kemenag.go.id/pdpp/mappp/7" target="_blank"><img src="https://ditpdpontren.kemenag.go.id/pdpp/umum/images/icon-lokasi.png" alt="icon lokasi"> </a>Jl. Bireuen-Takengon Kampung Arul Gading, , Bener Meriah
+                      </div>
+					  <div class="height-5 pendiri-pondok">
+
+                      </div>
+
+                      <div class="height-30 pendiri-pondok">
+                        <img src="https://ditpdpontren.kemenag.go.id/pdpp/umum/images/icon-telp.png" alt="icon telp"> 082368659288
+                      </div>
+                      <div class="height-30 pendiri-pondok">
+						                        <img src="https://ditpdpontren.kemenag.go.id/pdpp/umum/images/icon-website.png" alt="icon website"> -
+						                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 pdBtm-30">
+                    <div class="font-heltic pdTop-20 des-pondok">
+                      <h1>Profil Singkat</h1>
+                      Pondok Pesantren PP Darul Mukhlasin, NSPP 510011170024 berdiri pada tahun 0. Pondok Pesantren PP Darul Mukhlasin beralamat di Jl. Bireuen-Takengon Kampung Arul Gading, , Kabupaten Bener Meriah, Propinsi Aceh.
+
+
+                      
+          					  Jumlah santi di Pesantren PP Darul Mukhlasin adalah 79, dengan perincian jumlah santri pria berjumlah 27 orang dan santri perempuan berjumlah 52 orang, dengan tenaga pengajar berjumlah 13 orang.
+
+
+                    </div>
+                  </div>
+                  
+              </div>
+              <div class="col-md-3 col-xs-3">
+                <div class="statProfil text-center">
+                  <img src="https://ditpdpontren.kemenag.go.id/pdpp/umum/images/icon-jumlah-santri.png" alt="Generic placeholder image">
+                  <h4 class="mgBtm-0">Jumlah Santri</h4>
+                  <h2 class="mgTop-0 fs-50 color-green">79</h2>
+
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-3">
+                <div class="statProfil text-center">
+          					<h4 class="mgBtm-0"></h4>
+
+          					<h2 class="mgTop-0 fs-50 color-green">
+          					<canvas id="pie"></canvas>
+          					</h2>
+                </div>
+              </div>
+              
+              <div class="col-md-3 col-xs-3">
+                <div class="statProfil text-center">
+                  <img src="https://ditpdpontren.kemenag.go.id/pdpp/umum/images/pengajar.png" width="120px;" alt="Generic placeholder image">
+                  <h4 class="mgBtm-0">Jumlah Tenaga Pengajar</h4>
+                  <h2 class="mgTop-0 fs-50 color-green">13</h2>
+
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-3">
+                <div class="statProfil text-center">
+                  <h4 class="mgBtm-0"></h4>
+
+                  <h2 class="mgTop-0 fs-50 color-green">
+                  <canvas id="staff"></canvas>
+                  </h2>
+              </div>
+              </div>
+                                <div class="col-md-12 pdBtm-30">
+                    <div class="font-heltic pdTop-20 des-pondok">
+                      <center><h1>Selayang Pandang Pesantren PP Darul Mukhlasin </h1></center>
+                      <p class="MsoNormal"><span class="MsoSubtleEmphasis">Darul Mukhlasin adalah sebuah lembaga pendidikan yang
+menkader umat, yang berusaha muncul ditengah 2 kehidupan umat untuk mengupdate
+kehidupan umat sesuai dengan Al-Quran. Fenomena yang muncul didepan kita hari
+ini banyak perubahan-perubahan yang mempengaruhi ketawajuhan umat untuk
+berkomitmen dalam ajaran islam yang merupakan kunci keberhasilan dalam
+mengarungi perjalanan menuju akhirat, sehingga yang tampak hanya menuruti hawa
+nafsunya saja bukan memperhatikan keinginan Rob semesta alam, semua orang bercita-cita
+membangun dan memperbesar rumahnya, semua orang berusaha mengumpulkan harta
+sebanyak-banyaknya.<br>
+Semua orang bangga dengan pangkat dan kedudukan dan senang berbuat dosa tanpa
+merasa berdosa, merusak tanpa bersalah, terombang ambing dalam kerugian, takut
+hina sementara, tapi lupa kehinaan yang selama-lamanya, takut susah sementara,
+tapi lupa kerendahan yang sesungguhnya, merasa untung padahal rugi, merasa
+benar tapi keliru, merasa tepat tapi meleset, merasa dewasa tapi tidak pandai
+berpikir, merasa berkuasa tapi terpedaya, inilah gambar manusia hidup didunia
+kalau tidak punya iman dan amal yang shaleh.<br>
+Dayah Darul Mukhlasin hadir sebagai dayah yang bermazhab Ahlasunnah Waljamaah,
+bermazhab Syafi’i yang berusaha mempengaruhi dan mewarnai kehidupan umat sesuai
+dengan ajaran Al-Quran dan Hadist<o:p></o:p></span></p>
+                    </div>
+                  </div>
+                                <div class="clearfix"></div>
+          </div>
+      </div>
+      <!--include('includes.sidebar')-->
+    <!-- <div class="contentDsc col-md-12">
+      <h5>DISCLAMER : Semua Data Yang Ditampilkan Pada Laman ini, Adalah Berasal Dari Emis (Kementerian Agama Republik Indonesia Tidak Menambah, Mengubah Dan Menghapus Data Tanpa Ada Permintaan Dari Peguruan Tinggi). <br>
+      Apabila ada pihak Lain Yang Ingin Memanfaatkan Data Ini Untuk Kepentingan Umum Agar Mengajukan Perijinan Terlebih Dahulu  ke Kementerian Agama Republik Indonesia. </h5>
+    </div> -->
+   
+   <div class="clearfix"></div>
+      <!-- FOOTER -->
+      <div class="containers">
+        <div class="navbarFooter">
+          <ul>
+			<li class="">
+			<a href="https://ditpdpontren.kemenag.go.id/pdpp">Home</a>
+            </li>
+            <li class="">
+              <a href="https://ditpdpontren.kemenag.go.id/pdpp/about">About Us</a>
+            </li>
+            <li class="">
+              <a href="https://ditpdpontren.kemenag.go.id/pdpp/about">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <footer class="text-center">
+        <p>copyright@pdppkemenag2019</p>
+      </footer>
+
+   
+   
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ditpdpontren.kemenag.go.id/pdpp/umum/js/jquery.min.js"></script>
+  
+    <script src="https://ditpdpontren.kemenag.go.id/pdpp/umum/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	
+	
+	
+	
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".provinsi").change(function() {
+            $.getJSON("https://ditpdpontren.kemenag.go.id/pdpp/getkabupaten/" + $(".provinsi").val(), function(data) {
+                var $stations = $(".kabupaten");
+                $stations.empty();
+                $.each(data, function(index, value) {
+                    $stations.append('<option value="' + index +'">' + value + '</option>');
+                });
+            $(".kabupaten").trigger("change"); /* trigger next drop down list not in the example */
+            });
+        });
+    });
+  </script>
+
+
+<script src="https://ditpdpontren.kemenag.go.id/pdpp/js/Chart.bundle.js"></script>
+<script>
+
+  window.onload = function() {
+      var ctx = document.getElementById("pie").getContext("2d");
+      var staff = document.getElementById("staff").getContext("2d");
+      window.myPie = new Chart(ctx, config);
+       window.myPie = new Chart(staff, stapp);
+
+  };
+</script>
+
+
+
+
+
+
+<!-- pie chart :: created by agung -->
+<script type="text/javascript">
+
+var config = {
+    type: 'pie',
+    data: {
+        datasets: [{
+            data: [
+                79,
+                0,
+            ],
+            backgroundColor: [
+                "#F7464A",
+                "#46BFBD",
+            ],
+        }],
+        labels: [
+            " Mukim",
+            " Non-Mukin",
+        ]
+    },
+    options: {
+        responsive: true,
+        title: {
+            display: false,
+            text: 'Perbandingan Santri Mukim dan Tidak Mukim'
+        }
+    }
+};
+
+var stapp = {
+    type: 'pie',
+    data: {
+        datasets: [{
+            data: [
+                8,
+                5,
+            ],
+            backgroundColor: [
+                "#F7464A",
+                "#46BFBD",
+            ],
+        }],
+        labels: [
+            "Laki - Laki",
+            "Perempuan",
+        ]
+    },
+    options: {
+        responsive: true,
+        title: {
+            display: false,
+            text: 'Perbandingan Santri Mukim dan Tidak Mukim'
+        }
+    }
+};
+
+// For a pie chart
+// window.onload = function() {
+//     var ctx = document.getElementById("pie").getContext("2d");
+//     window.myPie = new Chart(ctx, config);
+// };
+
+
+
+</script>
+  </body>
+  </html>
