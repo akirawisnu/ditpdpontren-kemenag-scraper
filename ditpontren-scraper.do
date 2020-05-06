@@ -6,6 +6,20 @@ gl out "C:\Users\Akirawisnu\Dropbox\COVID-Response\pondok-pesantren"
 cap mkdir "$out/listponpes"
 
 local link "https://ditpdpontren.kemenag.go.id/pdpp/profil/"
+
+/*
+*****************************************************************
+   _____   __   .__                     .__                     
+  /  _  \ |  | _|__|___________ __  _  _|__| ______ ____  __ __ 
+ /  /_\  \|  |/ /  \_  __ \__  \\ \/ \/ /  |/  ___//    \|  |  \
+/    |    \    <|  ||  | \// __ \\     /|  |\___ \|   |  \  |  /
+\____|__  /__|_ \__||__|  (____  /\/\_/ |__/____  >___|  /____/ 
+        \/     \/              \/               \/     \/       
+*****************************************************************
+		
+Scraper for Ponpes in Indonesia		
+*/
+
 qui{
 	forval i=1/27741{
 		noi: di in green "Scraping for Ponpes ID: " `i'
@@ -64,6 +78,18 @@ qui{
 		else{
 			split detail_pontren, parse("jumlah santri pria berjumlah" "dan santri perempuan berjumlah" ", dengan tenaga pengajar berjumlah")
 			}
+		
+		cap des loc_pontren2
+		if _rc!=0{
+			gen loc_pontren2=""
+			gen loc_pontren3=""
+			}
+		cap des detail_pontren2
+		if _rc!=0{
+			gen detail_pontren2=""
+			gen detail_pontren3=""
+			gen detail_pontren4=""
+			}			
 		
 		ren loc_pontren2 built_yr_pontren
 		ren loc_pontren3 address_pontren
