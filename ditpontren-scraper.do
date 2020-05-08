@@ -125,6 +125,17 @@ qui{
 	forval i=1/27741{
 		cap append using `snsd`i''
 		}
+		
+	split address_pontren, parse("Kabupaten " "Propinsi ")
+	replace address_pontren2=address_pontren3 if address_pontren4!=""
+	replace address_pontren3=address_pontren4 if address_pontren4!=""
+	drop address_pontren4
+	ren address_pontren1 jalan_pontren
+	ren address_pontren2 kab_pontren
+	ren address_pontren3 prov_pontren
+	replace kab_pontren = subinstr(kab_pontren ,",","",.)
+	replace prov_pontren = subinstr(prov_pontren  ,".","",.)
+
 	compress
 	saveold "$out/dbase-ponpes-may2020.dta", replace
 	noi: di "SAVED"
